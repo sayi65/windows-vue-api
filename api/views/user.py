@@ -9,8 +9,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 class UserListViewSet(viewsets.ModelViewSet):
-    serializer = UserSerializer
-    users = User.objects.all()
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('emp_code', 'emp_name', 'email', 'created',)
 
