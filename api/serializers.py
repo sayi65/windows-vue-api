@@ -1,9 +1,14 @@
 from rest_framework import serializers
-from api.models import User
+from api.models import User, WorkTime
 
 class UserSerializer(serializers.ModelSerializer):
 
-
     class Meta:
         model = User
-        fields = ('id', 'emp_code', 'emp_name', 'email', 'created')
+        fields = '__all__'
+
+class WorkTimeSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = WorkTime
+        fields = '__all__'
