@@ -4,4 +4,4 @@ from rest_framework  import routers
 from api.views.user import UserListViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', UserListViewSet, base_name='user')
+router.register(r'users', UserListViewSet)
