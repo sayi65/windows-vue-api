@@ -1,5 +1,5 @@
 from api.models import User, WorkTime
-from api.serializers import UserSerializer, WorkTimeSerializer
+from api.serializers import WorkTimeSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins
 from rest_framework import generics
@@ -8,7 +8,7 @@ from rest_framework import generics
 # Create your views here.
 class WorkTimeListView(generics.ListCreateAPIView):    
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = WorkTimeSerializer
     filter_backends = (DjangoFilterBackend,)
     # filter_fields = ('id', 'emp_code', 'emp_name', 'email', 'created',)
 
