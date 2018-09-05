@@ -9,8 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'emp_code', 'emp_name', 'email', 'updated','created',)
 
 class WorkTimeSerializer(serializers.ModelSerializer):
-    users = UserSerializer(many=True)
+
     class Meta:
         model = WorkTime
-        fields = '__all__'
-        # fields = ('id', 'pj_name', 'reason', 'wk_reason', 'overtime','updated','created')
+        fields = ('id', 'pj_name', 'reason', 'wk_reason', 'overtime','updated','created')
